@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML&SASS Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- <style>
+    body{
+        background-color : red;
+    }
+</style> -->
+    
+</head>
+<body>
+
+    <input id="color" type="button" value="Dark" />
+
+<div class="content">    
+    <header>
+        <div class="row">
+            <!-- <button class="mobile-btn"><i class="fas fa-grip-lines"></i></button> -->
+            <nav class="primary-nav">
+                <ul>
+                    <li><a href="#">People.</a></li>
+                    <li><a href="#">Companies.</a></li>
+                    <li><a href="#">Stories.</a></li>
+                    <li><a href="#">About us.</a></li>
+                    
+                </ul>
+            </nav>
+            <nav class="secondary-nav">
+                <ul>
+                    <li id="date"></li>
+                    <li><a href="#">Careers.</a></li>
+                    <li><a href="#">Contact.</a></li>
+                    <li><a href="#" id="signIn" style="position: relative;">Sign In</a></li>
+                    <li><input style="border-radius: 50px; border-color:transparent; margin-right:-40px;" type="search" name="" id="search-inp" placeholder="Search..."></li>
+                    <li><button style="border-color:rgb(184, 178, 178); border-radius:40px;" id="generate_news_btn" onclick="clickedSrc()"><i class="fas fa-search"></i></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="news_div"></div>
+    <button style=" width:100px; margin:auto; border-radius:10px; height:40px; background-color:rgb(200, 252, 234)" id="showMore">Show More</button>
+
+
+    <section class="slider">
+        <div class="container">
+            <div class="row">
+                <div id="signinformDiv" style="background-color:red; width:250px; top:0%; margin-left:81%; position:absolute;">
+                    <form action="#" style="display: flex; flex-wrap:wrap; flex-direction:row; align-items:center; justify-content:space-between">
+                        <input type="email" placeholder="email">
+                        <i class="fas fa-times fa-lg" id='x'></i>
+                        <input type="password" placeholder="Password">
+                        <input type="button" value="Submit">
+                        
+                        <span style="display: flex;">Don't have an account? </span>
+                                <input id="signupBtn" type="button" value="Sign Up">
+
+                                <!-- <div class="formPopup" id="signupDiv">
+                                    <form action="#" class="formContainer">
+                                        <h2>Please Sign Up</h2>
+                                        <input type="text" id="email" placeholder="Your Email" name="email" required>
+                                        <input type="password" id="psw" placeholder="Your Password" name="psw" required>
+                                        <button type="submit" class="btn">Log in</button>
+                                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                    </form>
+                                    </div> -->
+
+                                <div id="signupDiv">
+                                    <form action="" >
+                                        <input type="email" placeholder="email">
+                                        <input type="password" placeholder="Password">
+                                        <input type="button" value="Submit">
+                                    </form>
+                                </div>    
+                        <!-- </p> -->
+                    </form>
+                </div>
+                    <div class="slider-img">
+                        <div>Invested in <a  class="slider-span1" href="#"><span class="hvr"> your ideas</span></a>.
+                            <div class="s1"><img src="./assets/img/slider/1.jpg" alt=""></div>
+                            <div class="s2"><img src="./assets/img/slider/2.jpg" alt=""></div>
+                            <div class="s3"><img src="./assets/img/slider/3.jpg" alt=""></div>
+                            <div class="s4"><img src="./assets/img/slider/4.jpg" alt=""></div>
+                            <div class="s5"><img src="./assets/img/slider/5.jpg" alt=""></div>
+                            <div class="s6"><img src="./assets/img/slider/6.png" alt=""></div>
+                            <div class="s7"><img src="./assets/img/slider/7.jpeg" alt=""></div>
+                            <div class="s8"><img src="./assets/img/slider/8.jpg" alt=""></div>
+                            <!-- <div class="r2"><img src="./assets/img/slider/9.jpg" alt=""></div> -->
+                        </div>
+
+
+                        <div>Invested in <a class="slider-span2" href="#"><span class="hvr2">you</span></a>.
+                            <div class="i1"><img src="./assets/img/slider/10.jpg" alt=""></div>
+                            <div class="i2"><img src="./assets/img/slider/11.jpg" alt=""></div>
+                            <div class="i3"><img src="./assets/img/slider/12.jpg" alt=""></div>
+                            <div class="i4"><img src="./assets/img/slider/13.jpg" alt=""></div>
+                            <div class="i5"><img src="./assets/img/slider/14.webp" alt=""></div>
+                            <div class="i6"><img src="./assets/img/slider/15.jpg" alt=""></div>
+                            <div class="i7"><img src="./assets/img/slider/16.png" alt=""></div>
+                            <div class="i8"><img src="./assets/img/slider/17.jpg" alt=""></div>
+                            <div class="i9"><img src="./assets/img/slider/18.jpg" alt=""></div>
+                        </div>
+                    </div>    
+                <div class="slider-paragraph">
+                    <p>We are the first backer of outstanding European startups in
+                        <strong> non-obvious</strong> digital and industrial technologies. We support you with our own expertise and Europe’s strongest network of entrepreneurial private investors.                       
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>    
+    </section>
+
+    <section class="investitors">
+
+        <section class="first-investitor">
+            <div class="container">
+                <div class="row">
+
+                        <div class="info-first">
+                            <p id="dyemansion-par">Invested in <span>DyeMansion</span></p>
+                            <h2>Invested in <span>Felix</span></h2>
+                            <p>Felix co-founded DyeMansion in 2013 to help the 3D printing industry transform and industrialize from a prototype technology to the digital manufacturing technology of the future. From perfect fit eyewear, shoe soles, orthotics, to aircraft and personalized car interiors – The digitalization of production affects all areas and their technology makes 3D printed products become a part of our everyday life.</p>
+                            <a href="#"><i class="fas fa-arrow-right"></i> Read more</a>    
+                                        
+                        </div> 
+
+                        <div class="column-8">
+                            <!-- <img src="./assets/img/investitors/felix.jpg" alt=""> -->
+                        </div>
+
+                </div>
+                    
+            </div>    
+                
+        </section>
+
+        <section class="second-investitor">
+            <div class="container">
+                <div class="row">
+
+                    <div class="bgr-img1">  </div> 
+                    
+                        <div class="second-inv">    
+                            <hgroup>                
+                                <h4>Invested in <span> PriceHubble</span></h4>
+                                <h3>Invested in Stefan</h3>
+                            </hgroup>  
+                            <div class="right-info">  
+                                <p>Dr. Stefan Heitmann founded PriceHubble in 2016. The company’s goal is to create transparency in the global real estate markets. PriceHubble is already Stefan’s second startup, and he found the idea while running his first company.</p>
+                                <a href="#"><i class="fas fa-arrow-right"></i> Read more</a>                                                          
+                            </div>
+
+                        </div>    
+
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="third-investitor">
+            <div class="container">
+                <div class="row">
+
+                        <div class="column-1">
+                            <p>Invested in <span> Seven Senders</span></p>
+                            <h2>Invested in Johannes</h2>
+                            <p>Johannes co-founded Seven Senders in 2014 with the goal to enable online shops to send parcels easily and at affordable prices around Europe. Today, Seven Senders counts many of Europe’s top e-commerce sites as its customers.</p>
+                            <a href="#"><i class="fas fa-arrow-right"></i> Read more</a>                   
+                        </div> 
+
+                        <div class="column-8">
+                            <!-- <img src="./assets/img/investitors/felix.jpg" alt=""> -->
+                        </div>
+
+                </div>
+                    
+            </div>    
+                
+        </section>
+    
+
+    </section>
+
+    <section class="funds">
+        <div class="container">
+            <div class="row">
+                <fieldset class="col-6"><legend>Digital Tech Fund</legend>
+                    <h3>Investing in Digital Technology</h3>
+                    <p>The digital tech fund invests in B2C- and B2B-oriented businesses in the fields of commerce, marketplaces, mobile and software.</p>
+                    <p><a href="#"><i class="fas fa-arrow-right"></a></i> Digital Tech Fund</p>
+                </fieldset>
+
+                <fieldset class="col-6"><legend>Industrial Tech Fund</legend>
+                    <h3>Investing in Industrial Technology</h3>
+                    <p>The industrial tech fund places its focus on deep tech, e.g. in industry 4.0, resource efficiency, industrial AI, IoT, enterprise software, cyber security, as well as medtech.</p>
+                    <p><a href="#"><i class="fas fa-arrow-right"></a></i> Industrial Tech Fund</p> 
+
+                </fieldset>
+            
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section class="members">
+        <div class="row">
+
+            <div class="col-10">
+                <div id="griditem1"  ></div>
+                <div id="griditem2" ></div>
+                <div id="griditem3"  ></div>
+                <div id="griditem4" ></div>
+                <div id="griditem5"  ></div>
+                <div id="griditem6" ></div>
+                <div id="griditem7"  ></div>
+                <div id="griditem8" ></div>
+                <div id="griditem9"  ></div>
+                <div id="griditem10" ></div>
+                <div id="griditem11"  ></div>
+                <div id="griditem12" ></div>
+                <div id="griditem13"  ></div>
+                <div id="griditem14" ></div>
+                <div id="griditem15"  ></div>
+                <div id="griditem16" ></div>
+            </div>
+
+
+            <div class="col-2">
+
+                <fieldset><legend>Private</legend></fieldset>
+                <fieldset><legend>Investor</legend></fieldset>
+                <fieldset><legend>Network</legend></fieldset>
+                <h3>250 Extraodinary people at your service</h3>
+                <p> We provide members of our investor network with vetted investment opportunities in early
+                    and later stage tech companies from over 25 different industries.</p>
+                <p><a href="#"><i class="fas fa-arrow-right"></a></i> Read more</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- <section class="stories">
+        <div class="container">
+            <div class="row">
+                <div class="one"><h2><a href="#">Latest NEWS</a></h2></div>
+                <div class="two">
+                    <div>
+                        <h3>LOREM IPSUM</h3>
+                        <p>
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+
+
+                </div>
+                    <div class="three">3</div>
+                    <div class="four">4</div> 
+                    <div class="five">
+
+                    <div>
+                        <h3>LOREM IPSUM</h3>
+                        <p>
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            Lorem ipsum dolor sit.
+                            <a href="#"><span>Read More</span></a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="six">
+                    <input id="moreInfo" type="button" onclick="location.href='./news.html';" value="More Info" />
+                </div>
+            </div>
+        </div>
+
+    </section>  -->
+    <!-- slider -->
+    <section style="background-color:pink; height:700px">
+        <img name="slider" width="800" height="500" />
+        <input id="previous" type="button" onclick="prevBtnn()" value="Previous">
+        <input id="next" type="button" onclick="nextBtnn()" value="Next">
+    </section>
+
+
+    <footer>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="one">
+                    <nav id="first-nav-footer">
+                        <ul>
+                            <li><a href="#">People</li></a>
+                            <li><a href="#">Companies</li></a>
+                            <li><a href="#">Stories</li></a>
+                            <li><a href="#">About us</li></a>
+                            <li><a href="#" style="font-size:30px">Careers</li></a>
+                            <li><a href="#" style="font-size: 30px;">Contact</li></a>
+                        </ul>
+                    </nav> 
+                    
+                    <nav id="second-nav-footer">
+                        <ul>
+                            <li><a href="#">Imprint.</li></a>
+                            <li><a href="#">FAQs.</li></a>
+                            <li><a href="#">Partners.</li></a>
+                            <li><a href="#">Privacy Policy.</li></a>
+                            <li><a href="#">SFDR Disclosures.</li></a>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="two">
+                    <h3>Let's make something great together</h3>
+                    <a href="#">
+                        <button type="button"><i class="fas fa-arrow-right"></i>Say hello</button>
+                    </a>
+                    
+                </div>
+        
+                <div class="three">
+                    <h3>Sign up to receive The btov Newsletter</h3>
+                    <form action="#">
+                        <!-- <i class="fas fa-arrow-right"></i> -->
+                        <input type="text" id="emailInput" placeholder="       Your email address">
+                        
+                        <div class="subscribe">
+                            <input type="checkbox" id="checkbox">
+                            <p id="subContent">Yes, send me the btov newsletter. You can change your mind at any time by clicking the unsubscribe 
+                                link in the footer of any email you receive from us. For more information
+                                about our privacy practices please visit our website. <span>*</span>
+                            </p>
+                        </div>  
+                        <p style="color:red; font-size:14px;" id="requiredCheck"></p>
+
+                        <input type="button" value="Subscribe" id="subscribeBtn" onclick="testInfo(emailInput)">
+                    </form>  
+                    <nav>
+                        <ul>
+                            <li><a href="#">Crunchbase.</a></li>
+                            <li><a href="#">LinkedIn.</a></li>
+                            <li><a href="#">Facebook.</a></li>
+                            <li><a href="#">Twitter.</a></li>
+                            <li><a href="#">Medium.</a></li>
+                        </ul>
+                </nav>
+
+                </div>
+
+            </div>.
+
+        </div>
+
+        <div>
+            <input id="newtab" type="button" value="Button">
+            <div id="empty"></div>
+        </div>
+    </footer>
+</div>    
+
+    <script src="node_modules/axios/dist/axios.js"></script>
+
+    <!-- subscribe -->
+    <script>
+            var emailInput = document.querySelector('#emailInput');
+            var checkbox = document.querySelector('#checkbox');
+            var subscribeBtn = document.querySelector('#subscribeBtn');
+            var requiredCheck = document.querySelector('#requiredCheck');
+            var subContent = document.querySelector('#subContent');
+            var classThree = document.querySelector('.three');
+
+            //var regx = /([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+).([a-z]+)(.[a-z]+)?$/;
+            //var regx = /^[A-Za-z0-9+_.-]+@(.+)$/ ;
+            //var regx = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/ ;
+            var regx = /[a-zA-Z0-9._-]+@[a-z]+\.([a-z]{2,3})$/ ;
+
+
+            checkbox.addEventListener('click', () => {
+                if(checkbox.checked == true){
+                    subContent.style.color = 'cadetblue';
+                    requiredCheck.textContent = ``;
+                }
+                else{
+                    subContent.style.color = 'black';
+                    requiredCheck.textContent = `This is a required field.`
+                }  
+            })
+            function testInfo(emailInput) {
+                var OK = regx.exec(emailInput.value);
+                //var out = document.querySelector('#out');
+                if (OK) {
+                    if(checkbox.checked == true){
+                        //subContent.style.color = 'cadetblue';
+                        alert('You subscribed successfully');
+                        classThree.innerHTML = "";
+                    }
+                    else{
+                        requiredCheck.textContent = `This is a required field.`
+                        //alert('Please confirm with check in checkbox');
+                    }    
+                } 
+                else {
+                    alert('Please enter a valid email address');
+                }
+            } 
+    </script>
+    <!-- slider -->
+    <script>
+        var i = 0; 			// Start Point
+        var images = [];	// Images Array
+        var time = 2500;	// Time Between Switch
+        var nextBtn = document.querySelector('#next');
+        var prevBtn = document.querySelector('#previous');
+            
+        // Image List
+        images[0] = "./assets/img/slider/1.jpg";
+        images[1] = "./assets/img/slider/2.jpg";
+        images[2] = "./assets/img/slider/3.jpg";
+        images[3] = "./assets/img/slider/4.jpg";
+
+        function nextBtnn(){
+            if(nextBtn.onclick){
+                if(i <= images.length - 1){
+                    document.slider.src = images[i];
+                    console.log('click' + images[i]);
+                    //document.write(i);
+                    i++;
+                    //console.log(i);
+                }
+                
+
+                //i++;
+            }
+        }
+
+        function prevBtnn(){
+            if(prevBtn.onclick){
+                if(i <= images.length - 1){
+                    document.slider.src = images[--i];
+                    console.log('click' + images[i--]);
+                }
+                else{
+                    i=0;
+                }
+            }
+        }
+
+        // Change Image
+        
+        function changeImg(){
+            document.slider.src = images[i];
+            //console.log('changeImg link' + images[i]);
+
+            // Check If Index Is Under Max
+            if(i < images.length - 1){
+            // Add 1 to Index
+                i++; 
+            } else { 
+                // Reset Back To O
+                i = 0;
+            }
+
+            // Run function every x seconds
+            setTimeout("changeImg()", time);
+        }
+        
+        // Run function when page loads
+        window.onload=changeImg;
+        
+    </script>
+
+    <!-- date -->
+    <script>
+
+    var datediv = document.querySelector('#date');
+    datediv.style.marginRight = '70px';
+    datediv.style.color = 'cadetblue';
+
+    setInterval(function(){
+        var today = new Date();
+            datediv.innerHTML = today.toLocaleTimeString('en-GB');
+    }, 1000);
+    </script>
+
+    <!-- light/dark mode -->
+    <script>
+        var changeBackground = document.querySelector('#color');
+        changeBackground.style.width = '55px';
+        changeBackground.style.height = '40px'
+        changeBackground.style.position = 'fixed';
+        changeBackground.style.top = '60px';
+        changeBackground.style.left = '4px';
+        changeBackground.style.borderRadius = '10px 10px';
+        changeBackground.style.backgroundColor = 'cadetblue';
+        changeBackground.style.cursor = 'pointer';
+
+
+
+        changeBackground.addEventListener('click', () =>{
+                document.body.style.backgroundColor = document.body.style.backgroundColor == 'black' ? 'white' : 'black';
+                document.body.style.color = document.body.style.color == 'white' ? 'black' : 'white';
+
+                changeBackground.value = changeBackground.value == 'Light' ? 'Dark' : 'Light'
+
+
+        })
+
+    </script>
+
+        <!-- subscribe alert -->
+    <script>
+        var myvar2 = setTimeout(myFunction, 2000);
+
+        function myFunction() {
+            var txt;
+            var r = console.log("Subscribe");
+            if (r == true) {
+                document.querySelector('.subscribe').scrollIntoView();
+            }
+        }
+    </script>
+
+    <!-- error doesnt work -->
+    <script>
+
+        const api_url = `http://api.mediastack.com/v1/news?access_key=6f911dfbc60305aead5a412a18b628af&sources=bbc&languages=en`;
+        const newtab = document.querySelector('#newtab');
+        var empty = document.querySelector('#empty');
+
+        var test = newtab.addEventListener('open', (e) => {
+            axios.get(api_url)
+            .then(response => {
+
+                let result = '<div class="w-100 d-flex flex-wrap justify-content-between">';
+
+                response.data.data.forEach(item =>{
+                    const d = `${item.description}`
+
+                    result += `
+                        <div class="card w-33" style="box-sizing: border-box">
+                        <p>${d}</p>
+                    </div>
+                `;
+                })
+
+                result += "</div>";
+
+                empty.innerHTML = window.open(result);
+
+            })
+            .catch(error => console.log(error))
+        });
+
+        //var openn = window.open(test);
+
+    </script>
+
+    <!-- SEARCH -->
+    <script>
+        //const submit_btn = document.querySelector('#submit-btn');
+
+        //const api_url = `http://api.mediastack.com/v1/news?access_key=6f911dfbc60305aead5a412a18b628af&sources=bbc&languages=en`;
+
+        var limit = 2;
+        var api = `http://api.mediastack.com/v1/news?access_key=6f911dfbc60305aead5a412a18b628af&sources=bbc&languages=en&`
+        var apiUrlLimit = `${api}limit=${limit}`;
+        const showMore = document.querySelector('#showMore');
+
+        const generate_news_btn = document.querySelector('#generate_news_btn');
+        showMore.style.display = 'none';
+
+
+        generate_news_btn.addEventListener('click', (e) => {
+            const searchvalue = document.querySelector('#search-inp').value;
+            const url = `${apiUrlLimit}&keywords=${searchvalue}`;            
+            
+            axios.get(url)
+                .then(response => {
+                    news_div(response.data);
+                })
+                .catch(error => console.log(error));
+
+            e.preventDefault();
+            showMore.style.display = '';
+        });
+
+
+        showMore.addEventListener('click', (e) =>{
+            limit += 2;
+            console.log(limit);
+            var apiUrlLimit = `${api}limit=${limit}`;
+
+            const searchvalue = document.querySelector('#search-inp').value;
+            const url = `${apiUrlLimit}&keywords=${searchvalue}`;            
+            
+            axios.get(url)
+                .then(response => {
+                    news_div(response.data);
+                })
+                .catch(error => console.log(error));
+
+            console.log(apiUrlLimit);
+        })
+
+        const news_div = (data) => {
+            let result = '';
+
+                data.data.forEach(item =>{
+                    const d = `${item.description}`
+                    result += `<p>${d}</p>`;
+                })
+
+                //result += " ";
+                //news_div.innerHTML = result;
+
+            const news_div = document.querySelector('#news_div');
+            news_div.innerHTML = result;
+            //const searchvalue = `${data.data[0].description} </br> ${data.data.url}`;
+
+            //news_div.innerHTML = searchvalue;
+        };
+
+        function clickedSrc(){
+            generate_news_btn.addEventListener('click', event => {
+                limit = 2;
+                console.clear();
+            });
+        }
+
+
+    </script>
+
+
+    <!-- CHANGE IMG -->
+    <script>
+
+        //Change IMG
+        var griditem1 = document.getElementById('griditem1');
+        var griditem2 = document.getElementById('griditem2');
+        var griditem3 = document.getElementById('griditem3');
+        var griditem4 = document.getElementById('griditem4');
+        var griditem5 = document.getElementById('griditem5');
+        var griditem6 = document.getElementById('griditem6');
+        var griditem7 = document.getElementById('griditem7');
+        var griditem8 = document.getElementById('griditem8');
+        var griditem9 = document.getElementById('griditem9');
+        var griditem10 = document.getElementById('griditem10');
+        var griditem11 = document.getElementById('griditem11');
+        var griditem12 = document.getElementById('griditem12');
+        var griditem13 = document.getElementById('griditem13');
+        var griditem14 = document.getElementById('griditem14');
+        var griditem15 = document.getElementById('griditem15');
+        var griditem16 = document.getElementById('griditem16');
+
+        //var test = document.querySelectorAll('.odd')
+
+        var src1 = './assets/img/investitors/felix2.jpg';
+        var src2 = './assets/img/investitors/felix.jpg';
+
+
+        var myVar = setInterval(setImg, 2000);
+        
+        function setImg() {
+
+            griditem1.innerHTML = griditem1.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem2.innerHTML = griditem2.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+            griditem3.innerHTML = griditem3.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem4.innerHTML = griditem4.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+            griditem5.innerHTML = griditem5.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem6.innerHTML = griditem6.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+            griditem7.innerHTML = griditem7.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem8.innerHTML = griditem8.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+            griditem9.innerHTML = griditem9.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem10.innerHTML = griditem10.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+            griditem11.innerHTML = griditem11.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem12.innerHTML = griditem12.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+            griditem13.innerHTML = griditem13.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem14.innerHTML = griditem14.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+            griditem15.innerHTML = griditem15.innerHTML == `<img src="${src1}" alt="">` ? `<img src="${src2}" alt="">` :  `<img src="${src1}" alt="">`
+            griditem16.innerHTML = griditem16.innerHTML == `<img src="${src2}" alt="">` ? `<img src="${src1}" alt="">` :  `<img src="${src2}" alt="">`
+
+            //x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+        }
+
+    </script>
+
+<!-- SignIn show on click -->
+    <script>
+        var signinformDiv = document.getElementById('signinformDiv');
+        signinformDiv.style.display = 'none';
+
+        var signinBtn = document.getElementById('signIn');
+        signinBtn.onclick = function(){
+            signinformDiv.style.display = '';
+        }
+
+        var x = document.getElementById('x');
+        x.onclick = function(){
+            signinformDiv.style.display = 'none';
+        }
+
+        var signupDiv = document.getElementById('signupDiv');
+        signupDiv.style.display = 'none';
+        //signupDiv.style.position = 'absolute';
+        //signupDiv.style.left = '-250%';
+        //signupDiv.style.background = 'pink';
+
+
+        var signupBtn = document.getElementById('signupBtn');
+        signupBtn.onclick = function(){
+            signupDiv.style.display='';
+        }
+
+
+        /*
+        function openForm() {
+            document.getElementById("signupDiv").style.display = "block";
+            }
+        function closeForm() {
+        document.getElementById("signupDiv").style.display = "none";
+        }
+        */
+
+        
+        
+
+
+        /*
+        var signIn = document.getElementById('signIn');
+        signIn.addEventListener('click', function(){
+            var showForm;
+            showForm = `<form action="#">
+                <p><input type="email" placeholder="email">Email</p>
+                <p><input type="password" placeholder="Password">Password</p>
+                <p><input type="button" value="Submit"></p>
+                </form>`;
+            console.log('abx');
+            var signInform = document.getElementsByClassName('signInform');
+            signInform.innerHTML = showForm;
+            console.log('dd')
+        })
+        */
+    </script>
+</body>
+</html>

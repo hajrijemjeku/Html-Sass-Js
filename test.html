@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <!-- <style>
+        img{
+            width:500px;
+            height:350px;
+        }
+        #mainImg{
+            
+            display: block;
+            height:400px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <input id="moreInfo" type="button" onclick="location.href='./news.html';" value="More Info" /> -->
+
+    
+
+    <!-- <div id="slider">
+        <div id="mainImg"></div>
+        <img class="images" src="./assets/img/slider/1.jpg" alt="">
+        <img class="images" src="./assets/img/slider/12.jpg" alt="">
+        <img class="images" src="./assets/img/slider/4.jpg" alt="">
+        <input class="sliderBtn" type="button" value="Change">
+        <input class="sliderBtn" type="button" value="Change2">
+    </div> -->
+
+    <script>
+        function imagefun() {
+            var Image_Id = document.getElementById('getImage');
+            if (Image_Id.src.match("imageName1.jpg")) {
+                Image_Id.src = "imageName2.jpg";
+            }
+            else {
+                Image_Id.src = "imageName1.jpg";
+            }
+        }        
+    </script>
+
+
+
+
+
+<!--     
+    <script>
+        //nese nuk ka click brenda 5sekondave automatik me ndryshu foto -- me qene mundesia edhe vet me bo ndryshe foton
+        var mainImg = document.querySelector('#mainImg');
+        var images = document.querySelectorAll('.images');
+        //var secondimg = document.querySelector('#secondimg');
+        var sliderBtn = document.querySelectorAll('.sliderBtn');
+
+        for(var i=0; i < sliderBtn.length; i++){
+
+            sliderBtn[i].addEventListener('click', function(){
+                //firstimg.style.width = '1000px';
+                mainImg.appendChild(images[i]);
+            });
+
+        }
+        
+
+        /*
+        sliderBtn[0].addEventListener('click', function(){
+            //firstimg.style.width = '1000px';
+            mainImg.appendChild(firstimg);
+        });
+        */
+        
+    </script>
+    */ -->
+
+</body>
+</html>

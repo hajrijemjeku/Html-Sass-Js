@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+</head>
+<body>
+
+        <!-- <form id="myForm" action="#">
+        First name: <input id="name" type="text" name="fname" value="Donald"><br>
+        Last name: <input id="lname" type="text" name="lname" value="Duck"><br>
+        <input type="submit" value="Submit">
+    </form> -->
+    
+    <!-- <button onclick="myFunction()">Try it</button> -->
+
+    <div>
+        <form id="myForm" action="" >
+            <p><input id="email" type="email" placeholder="email"></p>
+            <p><input id="password" type="password" placeholder="Password"></p>
+            <p><input id="submitBtn" type="submit" value="Submit" onclick="showDashboard()"></p>
+            <!-- <button onclick="showDashboard()" id="submitBtn">Submit</button> -->
+        </form> 
+    </div>
+
+    <script>
+
+        var email = document.getElementById('email');
+        var password = document.getElementById('password')
+        var submitBtn = document.getElementById('submitBtn')
+        //var myForm = document.getElementById('myForm');
+
+        function showDashboard() {
+
+            //submitBtn.addEventListener('click', () =>{
+                if(submitBtn.onclick){
+                if(email.value == 'a@a.a'&& password.value =='admin'){
+                    console.log(email.value);
+                    console.log(password.value)
+                    document.getElementById('myForm').action = "./index.html";
+                }
+                else{
+                    alert('wrong');
+                }
+            }
+        }
+    </script> 
+
+    <!-- <script>
+
+        var name = document.getElementById('name');
+        var lname = document.getElementById('lname')
+    function myFunction() {
+        if(name.value == 'Donald' || lname.value =='Duck'){
+
+            //document.getElementById("myForm").action = "index.html";
+            console.log(name.value);
+            //console.log(lname.value)
+        }
+    }
+    </script> -->
+
+
+
+
+
+
+
+</body>
+</html>

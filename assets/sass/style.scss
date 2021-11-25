@@ -1,0 +1,14 @@
+@import "base";
+@import "flex";
+
+// Mobile
+@media (max-width: 576px) {
+  @import "mobile";
+}
+
+// Desktop
+@media (min-width: 995px) {
+    @import "desktop";
+  
+  }
+  

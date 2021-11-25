@@ -1,0 +1,39 @@
+.content{
+    background-color: rgb(204, 112, 112);
+
+}
+
+header{
+    
+    //background-color: beige;
+    height: 80px;
+    
+    .row{
+        //background-color: cadetblue;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+
+        
+        ul{
+            list-style-type: none;   
+            height: 50px;
+            padding:0px;
+            margin:0px;
+
+        }
+        li{
+            //background-color: rgb(136, 136, 136);
+            display: inline;
+            padding:0px;
+            margin: 0px 25px;
+            line-height: 80px;
+        }
+        a{
+            font-size: 18px;
+            color:rgb(18, 1, 56);
+        }
+        
+
+    }
+}
