@@ -7,29 +7,99 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <form action="#">
+    <form id="myForm" action="#">
+        <input type="text" id="author" placeholder="author">
+        <br><br>
         <input type="text" id="title" placeholder="title">
         <br><br>
         <input type="text" id="description" placeholder="description"/>
         <br><br>
-        <input id="save" type="submit" value="Save">
+        <button type="submit" id="btn_save">Save</button>
+        <!-- <button onclick="deleteNewEl(${newEl.id})" type="submit" id="btn_delete">Delete</button> -->
+
+        <!-- <input id="save" type="submit" value="Save"> -->
     </form>
 
-    <script>
-        var title = document.querySelector('#title');
-        var description = document.querySelector('#description');
-        var btn_save = document.querySelector('#save');
+    <div id="storageResult"></div>
+    <div id="todos">
 
-        var news = [];
+    </div>
 
-        function saveNews() {
+    <script src="node_modules/axios/dist/axios.js"></script>
+    
+    <!-- NOT WORKING!! -->
+    <!-- <script>
+        var author = document.querySelector('#author')
+        var title = document.querySelector('#title')
+        var description = document.querySelector('#description')
+        var btn_save = document.querySelector('#btn_save')
+        //var btn_delete = document.querySelector('#btn_delete');
+        var storageResult =document.getElementById('storageResult')
+        const news = []
 
+        function updateNews() {
+
+            //var storageResult =document.getElementById('storageResult');
+
+            const ls_tasks = JSON.parse(localStorage.getItem('news'))
+            //document.getElementById('storageResult').innerHTML = newsList;
+            let news_html = '';
             
-
+            ls_tasks.forEach(newEl => {
+                news_html += ` <h3>${newEl.author}</h3>
+                    <h4>${newEl.title}</h4>
+                    <p>${newEl.description}</p>
+                    <button onclick="deleteNewEl(${newEl.id})" type="submit" id="btn_delete">Delete</button>`
+            })
+            storageResult.innerHTML = news_html
         }
 
 
+        function addNewsToLocalStorage(newEl) {
+            let news = JSON.parse(localStorage.getItem('news'))
+            news.push(newEl)
+            localStorage.setItem('news', JSON.stringify(news))
+        }
 
-    </script>
+        btn_save.addEventListener('click', (e) =>{
+
+            const author_text = author.value;
+            const title_text = title.value;
+            const description_text = description.value;
+
+
+            const n = {
+                id: parseInt(Math.random()*100),
+                author: author_text,
+                title: title_text,
+                description: description_text
+            }
+
+
+            addNewsToLocalStorage(n);
+            updateNews();
+            console.log(news);
+            //e.preventDefault();
+
+            //document.getElementById('myForm').action = './index.html#infoF';
+
+        })
+
+
+/*
+        function deleteNewEl(id) {
+            let news = JSON.parse(localStorage.getItem('news'))
+            const n_news = news.filter(newEl => newEl.id !== id)
+
+            localStorage.setItem('news', JSON.stringify(n_news))
+            updateNews();
+        }
+*/
+
+
+        //updateNews();
+    </script> -->
+
+
 </body>
 </html>

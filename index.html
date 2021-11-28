@@ -9,16 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- <style>
-    body{
-        background-color : red;
-    }
-</style> -->
     
 </head>
 <body>
 
     <input id="color" type="button" value="Dark" />
+    <div id="storageResult"></div>
 
 <div class="content">    
     <header>
@@ -38,29 +34,32 @@
                     <li id="date"></li>
                     <li><a href="#">Careers.</a></li>
                     <li><a href="#">Contact.</a></li>
-                    <li><a href="#" id="signIn" style="position: relative;">Sign In</a></li>
+                    <li>
+                        <a href="#" id="signIn" style="position: relative;">Sign In</a>
+                    </li>
                     <li><input style="border-radius: 50px; border-color:transparent; margin-right:-40px;" type="search" name="" id="search-inp" placeholder="Search..."></li>
-                    <li><button style="border-color:rgb(184, 178, 178); border-radius:40px;" id="generate_news_btn" onclick="clickedSrc()"><i class="fas fa-search"></i></button></li>
+                    <li><button style="border-color:rgb(184, 178, 178); border-radius:40px;" id="generate_news_btn"><i class="fas fa-search"></i></button></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div id="news_div"></div>
-    <button style=" width:100px; margin:auto; border-radius:10px; height:40px; background-color:rgb(200, 252, 234)" id="showMore">Show More</button>
+    <button style=" width:100px; margin:auto; border-radius:10px; height:40px; background-color:rgb(219, 219, 219)" id="showMore">Show More</button>
 
 
     <section class="slider">
         <div class="container">
             <div class="row">
-                <div id="signinformDiv" style="background-color:red; width:250px; top:0%; margin-left:81%; position:absolute;">
-                    <form action="#" style="display: flex; flex-wrap:wrap; flex-direction:row; align-items:center; justify-content:space-between">
-                        <input type="email" placeholder="email">
+                <div id="signinformDiv" style="background-color:rgb(223, 182, 182); width:250px; top:0%; margin-left:81%; position:absolute;">
+                    <form id="myForm" action="#" style="display: flex; flex-wrap:wrap; flex-direction:row; align-items:center; justify-content:space-between">
+
+                        <input id="email" type="email" placeholder="email">
                         <i class="fas fa-times fa-lg" id='x'></i>
-                        <input type="password" placeholder="Password">
-                        <input type="button" value="Submit">
+                        <input id="password" type="password" placeholder="Password">
+                        <input id="submitBtn" type="submit" value="Submit" onclick="showDashboard()">
                         
-                        <span style="display: flex;">Don't have an account? </span>
-                                <input id="signupBtn" type="button" value="Sign Up">
+                        <!-- <span style="display: flex;">Don't have an account? </span> -->
+                                <!-- <input id="signupBtn" type="button" value="Sign Up"> -->
 
                                 <!-- <div class="formPopup" id="signupDiv">
                                     <form action="#" class="formContainer">
@@ -73,7 +72,7 @@
                                     </div> -->
 
                                 <div id="signupDiv">
-                                    <form action="" >
+                                    <form id="signupForm" action="" >
                                         <input type="email" placeholder="email">
                                         <input type="password" placeholder="Password">
                                         <input type="button" value="Submit">
@@ -125,14 +124,14 @@
             <div class="container">
                 <div class="row">
 
-                        <div class="info-first">
+                        <div class="info-first" id="infoF">
                             <p id="dyemansion-par">Invested in <span>DyeMansion</span></p>
                             <h2>Invested in <span>Felix</span></h2>
                             <p>Felix co-founded DyeMansion in 2013 to help the 3D printing industry transform and industrialize from a prototype technology to the digital manufacturing technology of the future. From perfect fit eyewear, shoe soles, orthotics, to aircraft and personalized car interiors – The digitalization of production affects all areas and their technology makes 3D printed products become a part of our everyday life.</p>
-                            <a href="#"><i class="fas fa-arrow-right"></i> Read more</a>    
-                                        
+                            <a href="#"><i class="fas fa-arrow-right"></i> Read more</a>
+                        
                         </div> 
-
+                        <!-- <input type="submit" value="Submit" /> -->
                         <div class="column-8">
                             <!-- <img src="./assets/img/investitors/felix.jpg" alt=""> -->
                         </div>
@@ -186,7 +185,6 @@
             </div>    
                 
         </section>
-    
 
     </section>
 
@@ -236,7 +234,6 @@
                 <div id="griditem16" ></div>
             </div>
 
-
             <div class="col-2">
 
                 <fieldset><legend>Private</legend></fieldset>
@@ -252,59 +249,10 @@
 
     </section>
 
-
-    <!-- <section class="stories">
-        <div class="container">
-            <div class="row">
-                <div class="one"><h2><a href="#">Latest NEWS</a></h2></div>
-                <div class="two">
-                    <div>
-                        <h3>LOREM IPSUM</h3>
-                        <p>
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            <a href="#">Read More</a>
-                        </p>
-                    </div>
-
-
-                </div>
-                    <div class="three">3</div>
-                    <div class="four">4</div> 
-                    <div class="five">
-
-                    <div>
-                        <h3>LOREM IPSUM</h3>
-                        <p>
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            Lorem ipsum dolor sit.
-                            <a href="#"><span>Read More</span></a>
-                        </p>
-                    </div>
-
-                </div>
-                <div class="six">
-                    <input id="moreInfo" type="button" onclick="location.href='./news.html';" value="More Info" />
-                </div>
-            </div>
-        </div>
-
-    </section>  -->
+    
     <!-- slider -->
-    <section style="background-color:pink; height:700px">
-        <img name="slider" width="800" height="500" />
+    <section style="background-color:rgb(250, 250, 250); height:700px">
+        <img name="slider" width="100%" height="600" />
         <input id="previous" type="button" onclick="prevBtnn()" value="Previous">
         <input id="next" type="button" onclick="nextBtnn()" value="Next">
     </section>
@@ -349,7 +297,6 @@
                 <div class="three">
                     <h3>Sign up to receive The btov Newsletter</h3>
                     <form action="#">
-                        <!-- <i class="fas fa-arrow-right"></i> -->
                         <input type="text" id="emailInput" placeholder="       Your email address">
                         
                         <div class="subscribe">
@@ -379,14 +326,47 @@
 
         </div>
 
-        <div>
+        <!-- <div>
             <input id="newtab" type="button" value="Button">
             <div id="empty"></div>
-        </div>
+        </div> -->
     </footer>
 </div>    
 
     <script src="node_modules/axios/dist/axios.js"></script>
+
+    <!-- DASHBOARD -->
+    <script>
+
+        //const news = JSON.parse(localStorage.getItem("news"));
+        //document.getElementById('storageResult').innerHTML = news;
+
+
+        /*
+        updateNews();
+        function updateNews() {
+            var storageResult =document.getElementsByClassName('info-first')[0];
+
+            const newsList = JSON.parse(localStorage.getItem("news"));
+            //document.getElementById('storageResult').innerHTML = newsList;
+            let news_html = '';
+            
+            newsList.forEach(newEl => {
+                news_html += `
+
+                    <p id="dyemansion-par">${newEl.author}</p>
+                            <h2>${newEl.title}</h2>
+                            <p>${newEl.description}</p>
+                            <button id="deleteBtnnn"><i class="fas fa-arrow-right"></i>Delete</button>
+                `
+            })
+            storageResult.innerHTML = news_html;
+
+        }
+        */
+
+
+    </script>
 
     <!-- subscribe -->
     <script>
@@ -397,11 +377,7 @@
             var subContent = document.querySelector('#subContent');
             var classThree = document.querySelector('.three');
 
-            //var regx = /([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+).([a-z]+)(.[a-z]+)?$/;
-            //var regx = /^[A-Za-z0-9+_.-]+@(.+)$/ ;
-            //var regx = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/ ;
             var regx = /[a-zA-Z0-9._-]+@[a-z]+\.([a-z]{2,3})$/ ;
-
 
             checkbox.addEventListener('click', () => {
                 if(checkbox.checked == true){
@@ -415,16 +391,13 @@
             })
             function testInfo(emailInput) {
                 var OK = regx.exec(emailInput.value);
-                //var out = document.querySelector('#out');
                 if (OK) {
                     if(checkbox.checked == true){
-                        //subContent.style.color = 'cadetblue';
                         alert('You subscribed successfully');
                         classThree.innerHTML = "";
                     }
                     else{
                         requiredCheck.textContent = `This is a required field.`
-                        //alert('Please confirm with check in checkbox');
                     }    
                 } 
                 else {
@@ -432,11 +405,12 @@
                 }
             } 
     </script>
+
     <!-- slider -->
     <script>
-        var i = 0; 			// Start Point
-        var images = [];	// Images Array
-        var time = 2500;	// Time Between Switch
+        var i = 0; 			
+        var images = [];	
+        var time = 2500;	
         var nextBtn = document.querySelector('#next');
         var prevBtn = document.querySelector('#previous');
             
@@ -446,6 +420,7 @@
         images[2] = "./assets/img/slider/3.jpg";
         images[3] = "./assets/img/slider/4.jpg";
 
+        /*
         function nextBtnn(){
             if(nextBtn.onclick){
                 if(i <= images.length - 1){
@@ -455,8 +430,6 @@
                     i++;
                     //console.log(i);
                 }
-                
-
                 //i++;
             }
         }
@@ -472,42 +445,34 @@
                 }
             }
         }
+        */
 
         // Change Image
-        
         function changeImg(){
             document.slider.src = images[i];
-            //console.log('changeImg link' + images[i]);
 
-            // Check If Index Is Under Max
             if(i < images.length - 1){
-            // Add 1 to Index
                 i++; 
             } else { 
-                // Reset Back To O
                 i = 0;
             }
-
-            // Run function every x seconds
             setTimeout("changeImg()", time);
         }
         
-        // Run function when page loads
         window.onload=changeImg;
         
     </script>
 
     <!-- date -->
     <script>
+        var datediv = document.querySelector('#date');
+        datediv.style.marginRight = '70px';
+        datediv.style.color = 'cadetblue';
 
-    var datediv = document.querySelector('#date');
-    datediv.style.marginRight = '70px';
-    datediv.style.color = 'cadetblue';
-
-    setInterval(function(){
-        var today = new Date();
-            datediv.innerHTML = today.toLocaleTimeString('en-GB');
-    }, 1000);
+        setInterval(function(){
+            var today = new Date();
+                datediv.innerHTML = today.toLocaleTimeString('en-GB');
+        }, 1000);
     </script>
 
     <!-- light/dark mode -->
@@ -522,17 +487,12 @@
         changeBackground.style.backgroundColor = 'cadetblue';
         changeBackground.style.cursor = 'pointer';
 
-
-
         changeBackground.addEventListener('click', () =>{
                 document.body.style.backgroundColor = document.body.style.backgroundColor == 'black' ? 'white' : 'black';
                 document.body.style.color = document.body.style.color == 'white' ? 'black' : 'white';
 
                 changeBackground.value = changeBackground.value == 'Light' ? 'Dark' : 'Light'
-
-
         })
-
     </script>
 
         <!-- subscribe alert -->
@@ -540,78 +500,45 @@
         var myvar2 = setTimeout(myFunction, 2000);
 
         function myFunction() {
-            var txt;
-            var r = console.log("Subscribe");
+            var r = confirm("Subscribe");
             if (r == true) {
                 document.querySelector('.subscribe').scrollIntoView();
             }
         }
     </script>
 
-    <!-- error doesnt work -->
-    <script>
-
-        const api_url = `http://api.mediastack.com/v1/news?access_key=6f911dfbc60305aead5a412a18b628af&sources=bbc&languages=en`;
-        const newtab = document.querySelector('#newtab');
-        var empty = document.querySelector('#empty');
-
-        var test = newtab.addEventListener('open', (e) => {
-            axios.get(api_url)
-            .then(response => {
-
-                let result = '<div class="w-100 d-flex flex-wrap justify-content-between">';
-
-                response.data.data.forEach(item =>{
-                    const d = `${item.description}`
-
-                    result += `
-                        <div class="card w-33" style="box-sizing: border-box">
-                        <p>${d}</p>
-                    </div>
-                `;
-                })
-
-                result += "</div>";
-
-                empty.innerHTML = window.open(result);
-
-            })
-            .catch(error => console.log(error))
-        });
-
-        //var openn = window.open(test);
-
-    </script>
-
     <!-- SEARCH -->
     <script>
-        //const submit_btn = document.querySelector('#submit-btn');
-
         //const api_url = `http://api.mediastack.com/v1/news?access_key=6f911dfbc60305aead5a412a18b628af&sources=bbc&languages=en`;
 
         var limit = 2;
         var api = `http://api.mediastack.com/v1/news?access_key=6f911dfbc60305aead5a412a18b628af&sources=bbc&languages=en&`
         var apiUrlLimit = `${api}limit=${limit}`;
         const showMore = document.querySelector('#showMore');
-
         const generate_news_btn = document.querySelector('#generate_news_btn');
         showMore.style.display = 'none';
-
 
         generate_news_btn.addEventListener('click', (e) => {
             const searchvalue = document.querySelector('#search-inp').value;
             const url = `${apiUrlLimit}&keywords=${searchvalue}`;            
-            
-            axios.get(url)
-                .then(response => {
-                    news_div(response.data);
-                })
-                .catch(error => console.log(error));
 
-            e.preventDefault();
-            showMore.style.display = '';
+            if(searchvalue == null || searchvalue == ""){
+                alert('Please Fill Search Field')
+                //const news_div = document.querySelector('#news_div');
+                //news_div.innerHTML = '';
+            }
+            else{
+                
+                axios.get(url)
+                    .then(response => {
+                        news_div(response.data);
+                    })
+                    .catch(error => console.log(error));
+
+                e.preventDefault();
+                showMore.style.display = '';
+            }
         });
-
 
         showMore.addEventListener('click', (e) =>{
             limit += 2;
@@ -638,23 +565,16 @@
                     result += `<p>${d}</p>`;
                 })
 
-                //result += " ";
-                //news_div.innerHTML = result;
-
             const news_div = document.querySelector('#news_div');
             news_div.innerHTML = result;
             //const searchvalue = `${data.data[0].description} </br> ${data.data.url}`;
-
-            //news_div.innerHTML = searchvalue;
         };
 
-        function clickedSrc(){
-            generate_news_btn.addEventListener('click', event => {
-                limit = 2;
-                console.clear();
-            });
-        }
-
+        generate_news_btn.addEventListener('click', event => {
+            limit = 2;
+            console.clear();
+            news_div.innerHTML = '';
+        });
 
     </script>
 
@@ -686,7 +606,7 @@
         var src2 = './assets/img/investitors/felix.jpg';
 
 
-        var myVar = setInterval(setImg, 2000);
+        var myVar = setInterval(setImg, 2500);
         
         function setImg() {
 
@@ -732,42 +652,37 @@
         //signupDiv.style.position = 'absolute';
         //signupDiv.style.left = '-250%';
         //signupDiv.style.background = 'pink';
+        //var signupBtn = document.getElementById('signupBtn');
+        //signupBtn.onclick = function(){
+        //    signupDiv.style.display='';
+        //}
 
 
-        var signupBtn = document.getElementById('signupBtn');
-        signupBtn.onclick = function(){
-            signupDiv.style.display='';
-        }
+        var email = document.getElementById('email');
+        var password = document.getElementById('password')
+        var submitBtn = document.getElementById('submitBtn')
+        var deleteBtnnn = document.getElementById('deleteBtnnn');
+        deleteBtnnn.style.display = 'none';
 
+        //var myForm = document.getElementById('myForm');
 
-        /*
-        function openForm() {
-            document.getElementById("signupDiv").style.display = "block";
+        function showDashboard() {
+                if(submitBtn.onclick){
+                if(email.value == 'a@a.a' && password.value =='admin'){
+                    
+                    //document.body.appendChild(deleteBtn);
+                    document.getElementById('myForm').action = "./dashboard.html";
+
+                    deleteBtnnn.style.display = '';
+                    //infoFirstt.appendChild(deleteBtn);  
+                    console.log(deleteBtnnn);
+                }
+                else{
+                    alert('wrong');
+                }
             }
-        function closeForm() {
-        document.getElementById("signupDiv").style.display = "none";
         }
-        */
 
-        
-        
-
-
-        /*
-        var signIn = document.getElementById('signIn');
-        signIn.addEventListener('click', function(){
-            var showForm;
-            showForm = `<form action="#">
-                <p><input type="email" placeholder="email">Email</p>
-                <p><input type="password" placeholder="Password">Password</p>
-                <p><input type="button" value="Submit"></p>
-                </form>`;
-            console.log('abx');
-            var signInform = document.getElementsByClassName('signInform');
-            signInform.innerHTML = showForm;
-            console.log('dd')
-        })
-        */
     </script>
 </body>
 </html>
